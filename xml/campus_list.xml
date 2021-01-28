@@ -1,6 +1,6 @@
 <campus xmlns="http://www.sg.com"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.sg.com sch/schema-online-campus.xsd">
+	xsi:schemaLocation="http://www.sg.com schema//schema-online-campus.xsd">
 
 	<students>
 		<student>
