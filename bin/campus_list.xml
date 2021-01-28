@@ -1,0 +1,224 @@
+<campus xmlns="http://www.sg.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sg.com schema-online-campus.xsd">
+
+	<students>
+		<student>
+			<id>001</id>
+			<name>Sandro</name>
+			<surname>Gargano</surname>
+			<jobTitle>Waiter</jobTitle>
+			<paymentType>NOTOK</paymentType>
+		</student>
+		<student>
+			<id>002</id>
+			<name>Ermal</name>
+			<surname>Aliraj</surname>
+			<jobTitle>Web Developer</jobTitle>
+			<paymentType>OK</paymentType>
+		</student>
+		<student>
+			<id>003</id>
+			<name>Armela</name>
+			<surname>Xhaxho</surname>
+			<jobTitle>Shop Assistant</jobTitle>
+			<paymentType>UNKNOWN</paymentType>
+		</student>
+		<student>
+			<id>004</id>
+			<name>Aida</name>
+			<surname>Xhaxho</surname>
+			<jobTitle>Sales Associate</jobTitle>
+			<paymentType>OK</paymentType>
+		</student>
+		<student>
+			<id>005</id>
+			<name>Andrea</name>
+			<surname>Fumagalli</surname>
+			<jobTitle>Operations Manager</jobTitle>
+			<paymentType>OK</paymentType>
+		</student>
+		<student>
+			<id>006</id>
+			<name>Alessandro</name>
+			<surname>Eramo</surname>
+			<jobTitle>Plumber</jobTitle>
+			<paymentType>UNKNOWN</paymentType>
+		</student>
+	</students>
+	<courses>
+		<course>
+			<id>31001</id>
+			<name>Java fundamentals</name>
+			<description>This course engages students with little or no
+			programming experience to create Java programs. Participants are
+			introduced to object- oriented programming concepts, terminology,
+			and syntax, and the steps required to create basic Java programs
+			using the Eclipse interactive development environments.</description>
+		</course>
+		<course>
+			<id>31006</id>
+			<name>Java advanced programming</name>
+			<description>The Advanced Java Programming Learning Path is your
+			one-stop guide to mastering recent Java platform updates. It
+			contains detailed explanations of the latest programming
+			advancements and language features introduced from Java 9 onwards.
+			By taking this Leaning Path, you'll acquire practical guidance on
+			how to apply many of these new features. As you progress through the
+			Learning Path, you'll discover the key features to help you become
+			more productive. You will also advance your Java programming skills
+			required to build robust, performant, scalable, and enterprise-ready
+			applications.
+		</description>
+		</course>
+		<course>
+			<id>31223</id>
+			<name>Operating Systems</name>
+			<description>The purpose of the course is to study the fundamental
+			concepts and techniques necessary to write high-quality programs,
+			including basic concepts of object-oriented programming, modular
+			design, exception handling, and class libraries. All of the
+			mentioned concepts and techniques are studied using the Java
+			language.</description>
+		</course>
+		<course>
+			<id>31017</id>
+			<name>Computer Network</name>
+			<description>This course provides an introduction to computer
+			networks, with a special focus on the Internet architecture and
+			protocols. Topics include layered network architectures, addressing,
+			naming, forwarding, routing, communication reliability, the
+			client-server model, web and email protocols.</description>
+		</course>
+		<course>
+			<id>31012</id>
+			<name>Data Structures and Algorithms</name>
+			<description>The course focuses on basic and essential topics in data
+			structures, including array-based lists, linked lists, skiplists,
+			hash tables, recursion, binary trees, scapegoat trees, redâ€“black
+			trees, heaps, sorting algorithms, graphs, and binary trie.</description>
+		</course>
+	</courses>
+	<topics>
+		<topic>
+			<id>1</id>
+			<name>OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)</name>
+			<description></description>
+			<course>Java fundamentals</course>
+		</topic>
+		<topic>
+			<id>2</id>
+			<name>Basic Java constructs like loops and data types</name>
+			<description></description>
+			<course>Java fundamentals</course>
+		</topic>
+		<topic>
+			<id>3</id>
+			<name>String handling</name>
+			<description></description>
+			<course>Java fundamentals</course>
+		</topic>
+		<topic>
+			<id>4</id>
+			<name>Collection framework</name>
+			<description></description>
+			<course>Java fundamentals</course>
+		</topic>
+		<topic>
+			<id>5</id>
+			<name>Exception handling</name>
+			<description></description>
+			<course>Java fundamentals</course>
+		</topic>
+		<topic>
+			<id>1</id>
+			<name>Servlet</name>
+			<description></description>
+			<course>Java advanced programming</course>
+		</topic>
+		<topic>
+			<id>2</id>
+			<name>JSP</name>
+			<description></description>
+			<course>Java advanced programming</course>
+		</topic>
+		<topic>
+			<id>1</id>
+			<name>What is an Operating System?</name>
+			<description></description>
+			<course>Operating Systems</course>
+		</topic>
+		<topic>
+			<id>2</id>
+			<name>Operating System history</name>
+			<description></description>
+			<course>Operating Systems</course>
+		</topic>
+		<topic>
+			<id>3</id>
+			<name>Operating System concepts</name>
+			<description></description>
+			<course>Operating Systems</course>
+		</topic>
+		<topic>
+			<id>4</id>
+			<name>Operating System structures</name>
+			<description></description>
+			<course>Operating Systems</course>
+		</topic>
+		<topic>
+			<id>1</id>
+			<name>Local Area Network (LAN) Technologies</name>
+			<description></description>
+			<course>Computer Network</course>
+		</topic>
+		<topic>
+			<id>2</id>
+			<name>Introduction of MAC Address</name>
+			<description></description>
+			<course>Computer Network</course>
+		</topic>
+		<topic>
+			<id>3</id>
+			<name>Multiple Access Protocols</name>
+			<description></description>
+			<course>Computer Network</course>
+		</topic>
+		<topic>
+			<id>4</id>
+			<name>Ethernet Frame Format</name>
+			<description></description>
+			<course>Computer Network</course>
+		</topic>
+		<topic>
+			<id>1</id>
+			<name>Basic Data Structures: Arrays, Strings, Stacks, Queues</name>
+			<description></description>
+			<course>Data Structures and Algorithms</course>
+		</topic>
+		<topic>
+			<id>2</id>
+			<name>Basic math operations (addition, subtraction, multiplication, division, exponentiation)</name>
+			<description></description>
+			<course>Data Structures and Algorithms</course>
+		</topic>
+		<topic>
+			<id>3</id>
+			<name>Euclid's GCD Algorithm</name>
+			<description></description>
+			<course>Data Structures and Algorithms</course>
+		</topic>
+		<topic>
+			<id>4</id>
+			<name>Greedy Algorithms</name>
+			<description></description>
+			<course>Data Structures and Algorithms</course>
+		</topic>
+		<topic>
+			<id>5</id>
+			<name>Binary Searching</name>
+			<description></description>
+			<course>Data Structures and Algorithms</course>
+		</topic>
+	</topics>
+</campus>
