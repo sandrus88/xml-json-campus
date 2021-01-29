@@ -41,6 +41,4 @@ public class CampusXml extends XmlDao {
 	public String getAllCourses() {
 		return "";
 	}
-
-
 }
