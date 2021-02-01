@@ -1,6 +1,6 @@
-package org.sg.dto;
+package org.sg.campus.model;
 
-public class TopicDto {
+public class Topic {
 
 	private int id;
 	private String name;
@@ -40,6 +40,6 @@ public class TopicDto {
 	}
 
 	public String toString() {
-		return "Id = " + id + " Name = " + name + " Description = " + description + " Course = " + course;
+		return "topic[id: " + id + ", name: " + name + ", description: " + description + ", course: " + course + "]";
 	}
 }

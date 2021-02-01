@@ -1,6 +1,6 @@
-package org.sg.dto;
+package org.sg.campus.model;
 
-public class StudentDto {
+public class Student {
 
 	private int id;
 	private String name;
@@ -49,7 +49,7 @@ public class StudentDto {
 	}
 
 	public String toString() {
-		return "Id = " + id + " Name = " + name + " Surname = " + surname + " Job title = " + jobTitle
-				+ " Payment type = " + paymentType;
+		return "student[id: " + id + ", name: " + name + ", surname: " + surname + ", jobTitle: " + jobTitle
+				+ ", paymentType: " + paymentType + "]";
 	}
 }
