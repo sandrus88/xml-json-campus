@@ -47,7 +47,6 @@ public class StudentDaoImpl implements StudentDao{
 			}
 			students.add(dto);	
 		}
-		SGUtil.printList(students);
 		return students;
 	}	
 

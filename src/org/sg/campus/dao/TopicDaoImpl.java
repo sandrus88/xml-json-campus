@@ -44,7 +44,6 @@ public class TopicDaoImpl implements TopicDao {
 			}
 			topics.add(dto);
 		}
-		System.out.println(topics);
 		return topics;
 	}
 

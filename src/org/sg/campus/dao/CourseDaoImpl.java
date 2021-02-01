@@ -42,7 +42,6 @@ public class CourseDaoImpl implements CourseDao {
 			}
 			courses.add(dto);
 		}
-		System.out.println(courses);
 		return courses;
 	}
 
