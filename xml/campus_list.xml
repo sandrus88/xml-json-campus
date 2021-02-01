@@ -103,121 +103,121 @@
 		<topic>
 			<id>1</id>
 			<name>OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java fundamentals</course>
 		</topic>
 		<topic>
 			<id>2</id>
 			<name>Basic Java constructs like loops and data types</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java fundamentals</course>
 		</topic>
 		<topic>
 			<id>3</id>
 			<name>String handling</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java fundamentals</course>
 		</topic>
 		<topic>
 			<id>4</id>
 			<name>Collection framework</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java fundamentals</course>
 		</topic>
 		<topic>
 			<id>5</id>
 			<name>Exception handling</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java fundamentals</course>
 		</topic>
 		<topic>
-			<id>1</id>
+			<id>6</id>
 			<name>Servlet</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java advanced programming</course>
 		</topic>
 		<topic>
-			<id>2</id>
+			<id>7</id>
 			<name>JSP</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Java advanced programming</course>
 		</topic>
 		<topic>
-			<id>1</id>
+			<id>8</id>
 			<name>What is an Operating System?</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Operating Systems</course>
 		</topic>
 		<topic>
-			<id>2</id>
+			<id>9</id>
 			<name>Operating System history</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Operating Systems</course>
 		</topic>
 		<topic>
-			<id>3</id>
+			<id>10</id>
 			<name>Operating System concepts</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Operating Systems</course>
 		</topic>
 		<topic>
-			<id>4</id>
+			<id>11</id>
 			<name>Operating System structures</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Operating Systems</course>
 		</topic>
 		<topic>
-			<id>1</id>
+			<id>12</id>
 			<name>Local Area Network (LAN) Technologies</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Computer Network</course>
 		</topic>
 		<topic>
-			<id>2</id>
+			<id>13</id>
 			<name>Introduction of MAC Address</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Computer Network</course>
 		</topic>
 		<topic>
-			<id>3</id>
+			<id>14</id>
 			<name>Multiple Access Protocols</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Computer Network</course>
 		</topic>
 		<topic>
-			<id>4</id>
+			<id>15</id>
 			<name>Ethernet Frame Format</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Computer Network</course>
 		</topic>
 		<topic>
-			<id>1</id>
+			<id>16</id>
 			<name>Basic Data Structures: Arrays, Strings, Stacks, Queues</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Data Structures and Algorithms</course>
 		</topic>
 		<topic>
-			<id>2</id>
+			<id>17</id>
 			<name>Basic math operations (addition, subtraction, multiplication, division, exponentiation)</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Data Structures and Algorithms</course>
 		</topic>
 		<topic>
-			<id>3</id>
+			<id>18</id>
 			<name>Euclid's GCD Algorithm</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Data Structures and Algorithms</course>
 		</topic>
 		<topic>
-			<id>4</id>
+			<id>19</id>
 			<name>Greedy Algorithms</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Data Structures and Algorithms</course>
 		</topic>
 		<topic>
-			<id>5</id>
+			<id>20</id>
 			<name>Binary Searching</name>
-			<description></description>
+			<description>ciao</description>
 			<course>Data Structures and Algorithms</course>
 		</topic>
 	</topics>
