@@ -2,12 +2,13 @@ package org.sg.campus.service;
 
 import java.util.List;
 
+import org.sg.campus.dao.CourseDao;
 import org.sg.campus.dao.CourseDaoImpl;
 import org.sg.campus.model.Course;
 
 public class CourseServiceImpl implements CourseService {
 	
-	private CourseDaoImpl courseDao; 
+	private CourseDao courseDao; 
 	
 	public CourseServiceImpl() throws Exception {
 		courseDao = new CourseDaoImpl();

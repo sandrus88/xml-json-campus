@@ -23,7 +23,9 @@ public class CourseDaoImpl implements CourseDao {
 		List<Course> courses = new ArrayList<Course>();
 		NodeList coursesList = document.getElementsByTagName("course");
 		for (int i = 0; i < coursesList.getLength(); i++) {
-			Course dto = new Course();
+			int id = -1;
+			String name = null;
+			String description = null;
 			Node courseNode = coursesList.item(i);
 			NodeList courseFieldsList = courseNode.getChildNodes();
 			for (int j = 0; j < courseFieldsList.getLength(); j++) {
@@ -32,15 +34,18 @@ public class CourseDaoImpl implements CourseDao {
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
 					if (nodeName.equals("id")) {
-						dto.setId(Integer.parseInt(nodeContent));
+						id = Integer.parseInt(nodeContent);
 					} else if (nodeName.equals("name")) {
-						dto.setName(nodeContent);
+						name = nodeContent;
 					} else if (nodeName.equals("description")) {
-						dto.setDescription(nodeContent);
+						description = nodeContent;
 					}
 				}
 			}
-			courses.add(dto);
+			if (id != -1) {
+				Course dto = new Course(id, name, description);
+				courses.add(dto);
+			}
 		}
 		return courses;
 	}
@@ -48,18 +53,18 @@ public class CourseDaoImpl implements CourseDao {
 	@Override
 	public void get(String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void create(String id, String name, String description) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void update(String id, String name, String description) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

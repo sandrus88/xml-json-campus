@@ -2,19 +2,20 @@ package org.sg.campus.service;
 
 import java.util.List;
 
+import org.sg.campus.dao.StudentDao;
 import org.sg.campus.dao.StudentDaoImpl;
 import org.sg.campus.model.Student;
 
 public class StudentServiceImpl implements StudentService {
 	
-	private StudentDaoImpl studentDao; 
+	private StudentDao studentDao; 
 	
 	public StudentServiceImpl() throws Exception {
 		studentDao = new StudentDaoImpl();
 	}
 
 	public void create(String id, String name, String surname, String jobTitle) {
-		// TODO Auto-generated method stub
+		throw new IllegalArgumentException("ancora da implemenare"); 
 		
 	}
 

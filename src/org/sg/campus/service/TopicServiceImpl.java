@@ -2,12 +2,13 @@ package org.sg.campus.service;
 
 import java.util.List;
 
+import org.sg.campus.dao.TopicDao;
 import org.sg.campus.dao.TopicDaoImpl;
 import org.sg.campus.model.Topic;
 
 public class TopicServiceImpl implements TopicService {
 	
-	private TopicDaoImpl topicDao; 
+	private TopicDao topicDao; 
 	
 	public TopicServiceImpl() throws Exception {
 		topicDao = new TopicDaoImpl();
