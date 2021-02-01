@@ -56,9 +56,7 @@ public class CampusDao {
 					}
 				}
 			}
-			if (!studentsList.item(i).getTextContent().equals(null)) {
 			students.add(dto);
-			}
 		}
 		System.out.println(students);
 		return students;
