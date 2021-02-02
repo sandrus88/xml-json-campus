@@ -3,7 +3,7 @@ package org.sg.campus.service;
 import java.util.List;
 
 import org.sg.campus.dao.StudentDao;
-import org.sg.campus.dao.StudentDaoImpl;
+import org.sg.campus.dao.impl.domparser.StudentDaoImpl;
 import org.sg.campus.model.Student;
 
 public class StudentServiceImpl implements StudentService {
@@ -15,12 +15,12 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	public void create(String id, String name, String surname, String jobTitle) {
-		throw new IllegalArgumentException("ancora da implementare"); 
+		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n"); 
 		
 	}
 
 	public void update(String string, String string2, String string3, String string4) {
-		throw new IllegalArgumentException("ancora da implementare"); 
+		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n"); 
 		
 	}
 
@@ -29,7 +29,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	public void get(String string) {
-		throw new IllegalArgumentException("ancora da implementare");
+		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
 		
 	}
 }

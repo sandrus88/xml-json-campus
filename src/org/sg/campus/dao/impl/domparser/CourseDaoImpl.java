@@ -1,8 +1,9 @@
-package org.sg.campus.dao;
+package org.sg.campus.dao.impl.domparser;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.sg.campus.dao.CourseDao;
 import org.sg.campus.model.Course;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -52,19 +53,20 @@ public class CourseDaoImpl implements CourseDao {
 
 	@Override
 	public void get(String string) {
-		throw new IllegalArgumentException("ancora da implementare");
+		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
 
 	}
 
 	@Override
 	public void create(String id, String name, String description) {
-		throw new IllegalArgumentException("ancora da implementare");
+		
+		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n");
 
 	}
 
 	@Override
 	public void update(String id, String name, String description) {
-		throw new IllegalArgumentException("ancora da implementare");
+		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 
 	}
 }

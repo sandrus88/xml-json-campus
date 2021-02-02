@@ -3,7 +3,7 @@ package org.sg.campus.service;
 import java.util.List;
 
 import org.sg.campus.dao.TopicDao;
-import org.sg.campus.dao.TopicDaoImpl;
+import org.sg.campus.dao.impl.domparser.TopicDaoImpl;
 import org.sg.campus.model.Topic;
 
 public class TopicServiceImpl implements TopicService {
@@ -15,12 +15,12 @@ public class TopicServiceImpl implements TopicService {
 	}
 
 	public void create(String id, String name, String description, String course) {
-		throw new IllegalArgumentException("ancora da implementare");
+		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n");
 		
 	}
 
 	public void update(String id, String name, String description, String course) {
-		throw new IllegalArgumentException("ancora da implementare");
+		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 		
 	}
 
@@ -29,7 +29,7 @@ public class TopicServiceImpl implements TopicService {
 	}
 
 	public void get(String string) {
-		throw new IllegalArgumentException("ancora da implementare");
+		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
 		
 	}
 }
