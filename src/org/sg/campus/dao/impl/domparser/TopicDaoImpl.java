@@ -33,7 +33,7 @@ public class TopicDaoImpl extends DOMParserDao implements TopicDao {
 					} else if (nodeName.equals("description")) {
 						dto.setDescription(nodeContent);
 					} else if (nodeName.equals("course")) {
-						dto.setCourse(nodeContent);
+						dto.setCourse(Integer.parseInt(nodeContent));
 					}
 				}
 			}
@@ -43,24 +43,24 @@ public class TopicDaoImpl extends DOMParserDao implements TopicDao {
 	}
 
 	@Override
-	public Topic get(String string) {
+	public Topic get(int id) {
 		Topic topic = new Topic();
 		return topic;
 	}
 
 	@Override
-	public void create(String id, String name, String description, String course) {
+	public void create(int id, String name, String description, int course) {
 		
 //		document.createElement("topic");
 		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n");
 	}
 
 	@Override
-	public void update(String id, String name, String description, String course) {
+	public void update(int id, String name, String description, int course) {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 	}
 	
-	public void delete(String id) {
+	public void delete(int id) {
 		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");	
 	}
 }

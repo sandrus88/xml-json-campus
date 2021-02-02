@@ -14,12 +14,12 @@ public class StudentServiceImpl implements StudentService {
 		studentDao = new StudentDaoImpl();
 	}
 
-	public void create(String id, String name, String surname, String jobTitle) {
+	public void create(int id, String name, String surname, String jobTitle) {
 		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n"); 
 		
 	}
 
-	public void update(String string, String string2, String string3, String string4) {
+	public void update(int id, String name, String surname, String jobTitle) {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n"); 
 		
 	}
@@ -28,12 +28,12 @@ public class StudentServiceImpl implements StudentService {
 		return studentDao.getAll();
 	}
 
-	public Student get(String string) {
+	public Student get(int id) {
 		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");	
 	}
 
 	@Override
-	public void delete(String id) {
+	public void delete(int id) {
 		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");
 		
 	}

@@ -5,7 +5,7 @@ public class Topic {
 	private int id;
 	private String name;
 	private String description;
-	private String course;
+	private int course;
 
 	public void setId(int x) {
 		id = x;
@@ -31,11 +31,11 @@ public class Topic {
 		return description;
 	}
 
-	public void setCourse(String str) {
-		course = str;
+	public void setCourse(int i) {
+		course = i;
 	}
 
-	public String getCourse() {
+	public int getCourse() {
 		return course;
 	}
 

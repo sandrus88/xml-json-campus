@@ -14,12 +14,12 @@ public class TopicServiceImpl implements TopicService {
 		topicDao = new TopicDaoImpl();
 	}
 
-	public void create(String id, String name, String description, String course) {
+	public void create(int id, String name, String description, int course) {
 		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n");
 		
 	}
 
-	public void update(String id, String name, String description, String course) {
+	public void update(int id, String name, String description, int course) {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 		
 	}
@@ -28,13 +28,13 @@ public class TopicServiceImpl implements TopicService {
 		return topicDao.getAll();
 	}
 
-	public void get(String string) {
+	public void get(int string) {
 		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
 		
 	}
 
 	@Override
-	public void delete(String id) {
+	public void delete(int id) {
 		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");
 		
 	}

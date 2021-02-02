@@ -45,24 +45,24 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 		return courses;
 	}
 
-	public Course get(String id) {
+	public Course get(int id) {
 		Course course = new Course();
 		return course;
 	}
 
 	@Override
-	public void create(String id, String name, String description) {
+	public void create(int id, String name, String description) {
 		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n");
 
 	}
 
 	@Override
-	public void update(String id, String name, String description) {
+	public void update(int id, String name, String description) {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 
 	}
 	
-	public void delete(String id) {
+	public void delete(int id) {
 		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");	
 	}
 }

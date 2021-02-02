@@ -7,7 +7,7 @@ import org.sg.campus.model.Topic;
 public interface TopicDao {
 	
 	List<Topic> getAll() throws Exception;
-	Topic get(String string);
-	void create(String id, String name, String description, String course);
-	void update(String id, String name, String description, String course);
+	Topic get(int id);
+	void create(int id, String name, String description, int course);
+	void update(int id, String name, String description, int course);
 }

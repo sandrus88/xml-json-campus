@@ -7,8 +7,9 @@ import org.sg.campus.model.Course;
 public interface CourseDao {
 	
 	List<Course> getAll() throws Exception;
-	Course get(String id);
-	void create(String id, String name, String description);
-	void update(String id, String name, String description);
+	Course get(int id);
+	void create(int id, String name, String description);
+	void update(int id, String name, String description);
+	void delete(int id);
 }
 

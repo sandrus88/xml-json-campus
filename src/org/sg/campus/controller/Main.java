@@ -51,10 +51,10 @@ public class Main {
 	private static String chooseOperationTopic(TopicService topicService, BufferedReader bufferReader)
 			throws IOException, Exception {
 		String inputLine;
-		String id = null;
+		int id = -1;
 		String name = null;
 		String description = null;
-		String course = null;
+		int course = -1;
 
 		while (true) {
 			System.out.println("Inserisci l'operazione da eseguire: \nn - new topic" + "\nr - read topic by id"
@@ -89,7 +89,7 @@ public class Main {
 	private static String chooseOperationCourse(CourseService courseService, BufferedReader bufferReader)
 			throws IOException, Exception {
 		String inputLine;
-		String id = null;
+		int id = -1;
 		String name = null;
 		String description = null;
 		
@@ -126,7 +126,7 @@ public class Main {
 	private static String chooseOperationStudent(StudentService studentService, BufferedReader bufferReader)
 			throws IOException, Exception {
 		String inputLine;
-		String id = null;
+		int id = -1;
 		String name = null;
 		String surname = null;
 		String jobTitle = null;
