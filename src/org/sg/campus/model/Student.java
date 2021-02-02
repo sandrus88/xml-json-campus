@@ -7,6 +7,17 @@ public class Student {
 	private String surname;
 	private String jobTitle;
 	private String paymentType;
+    
+    public Student() {
+    }
+    
+	public Student(int id, String name, String surname, String jobTitle, String paymentType) {
+		this.id = id;
+		this.name = name;
+		this.surname = surname;
+		this.jobTitle = jobTitle;
+		this.paymentType = paymentType;
+	}
 	
 	public void setId(int x) {
 		id = x;

@@ -46,8 +46,8 @@ public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 
 	@Override
 	public Student get(int id) {
-		Student student = new Student();
-		return student;
+		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
+		
 	}
 
 	@Override
