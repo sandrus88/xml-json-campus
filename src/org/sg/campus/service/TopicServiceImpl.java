@@ -15,12 +15,12 @@ public class TopicServiceImpl implements TopicService {
 	}
 
 	public void create(String id, String name, String description, String course) {
-		// TODO Auto-generated method stub
+		throw new IllegalArgumentException("ancora da implementare");
 		
 	}
 
 	public void update(String id, String name, String description, String course) {
-		// TODO Auto-generated method stub
+		throw new IllegalArgumentException("ancora da implementare");
 		
 	}
 
@@ -29,7 +29,7 @@ public class TopicServiceImpl implements TopicService {
 	}
 
 	public void get(String string) {
-		// TODO Auto-generated method stub
+		throw new IllegalArgumentException("ancora da implementare");
 		
 	}
 }
