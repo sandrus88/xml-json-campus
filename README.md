@@ -48,15 +48,18 @@ Dove:
 * `xsi:schemaLocation="http://www.sg.com schema-online-campus.xsd"` - definisce dove si trova lo schema da usare: la parte prima della stringa indica il namespace "http://www.sg.com", mentre l'altra parte indica il percorso dello schema xsd dove e' stato definito questo namespace.
 
 #### A cosa servono i file xml?
-In sintesi i file xml servono: to do.
+XML è un meta-linguaggio per definire la struttura di documenti e dati. Un documento XML è un file di testo che contiene una serie di tag, attributi e testo secondo regole sintattiche ben definite nel suo XML Schema (xsd).
 
 # Maneggiare file xml usando java
 
 #### DOMParser
-TODO due righe che cos' e domparser 
+Il parsing e' un processo che analizza un flusso di dati in input ( da file o da tastiera ) che determina la correttezza sintattica di tale input. In java esistono, tra gli altri, due approcci: il SAX e il DOM. DOMParser carica tutto l'albero del xml in memoria, e ogni elemento diventa un nodo dell'albero rappresentato da una classe che implementa l'interfaccia org.w3c.dom.Node.
 
 #### Inizializzare e usare DOMParser
-parla del document getchildnodes etc.
+* Occorre istanziare un oggetto document di tipo Document, parsare il file xml di interesse e inizializzare, tramite un oggetto parser di tipo DOMParser, il document da cui prendere i valori del file xml. 
+* Creato il document, ogni elemento viene rappresentato come un nodo. Tramite il metodo `getElementsByTagName("nome_elemento")`, si estrae il nodo dell'elemento `nome_elemento`. 
+* Se ci sono, si estrapolano tutti i figli tramite `getChildNodes()` che restituisce una lista di nodi di tipo `NodeList`. 
+* Per ottenere il valore di ogni singolo elemento (nodo) utilizziamo il metodo `getTextContent()`.
 
 # Links
 
