@@ -1,10 +1,24 @@
 package org.sg.campus.service;
+// cambiare i metodi get
 
+// creare classe abstract padre con DOMParserDao
+//public Document document;
+//
+//public DOMParserDao() throws Exception {
+//	DOMParser parser = new DOMParser();
+//	parser.parse("xml/campus_list.xml");
+//	document = parser.getDocument();
+//}
+
+// per ogni sottoclasse dao creare un costruttore vuoto che chiami il super().
 import java.util.List;
 
 import org.sg.campus.dao.CourseDao;
 import org.sg.campus.dao.impl.domparser.CourseDaoImpl;
 import org.sg.campus.model.Course;
+import org.w3c.dom.Document;
+
+import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 
 public class CourseServiceImpl implements CourseService {
 	
@@ -28,9 +42,8 @@ public class CourseServiceImpl implements CourseService {
 		return courseDao.getAll();
 	}
 
-	public void get(String string) {
-		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
-		
+	public Course get(String id) {
+		return null;
 	}
 
 	@Override

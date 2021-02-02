@@ -7,7 +7,7 @@ public class Student {
 	private String surname;
 	private String jobTitle;
 	private String paymentType;
-
+	
 	public void setId(int x) {
 		id = x;
 	}

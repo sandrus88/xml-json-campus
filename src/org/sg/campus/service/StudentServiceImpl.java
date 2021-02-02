@@ -28,9 +28,8 @@ public class StudentServiceImpl implements StudentService {
 		return studentDao.getAll();
 	}
 
-	public void get(String string) {
-		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
-		
+	public Student get(String string) {
+		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");	
 	}
 
 	@Override

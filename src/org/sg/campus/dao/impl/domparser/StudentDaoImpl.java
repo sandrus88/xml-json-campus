@@ -5,19 +5,13 @@ import java.util.List;
 
 import org.sg.campus.dao.StudentDao;
 import org.sg.campus.model.Student;
-import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.sun.org.apache.xerces.internal.parsers.DOMParser;
-
-public class StudentDaoImpl implements StudentDao{
-	public Document document;
+public class StudentDaoImpl extends DOMParserDao implements StudentDao{
 
 	public StudentDaoImpl() throws Exception {
-		DOMParser parser = new DOMParser();
-		parser.parse("xml/campus_list.xml");
-		document = parser.getDocument();
+		super();
 	}
 
 	public List<Student> getAll() throws Exception {
@@ -51,9 +45,9 @@ public class StudentDaoImpl implements StudentDao{
 	}	
 
 	@Override
-	public void get(String string) {
-		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
-		
+	public Student get(String string) {
+		Student student = new Student();
+		return student;
 	}
 
 	@Override
