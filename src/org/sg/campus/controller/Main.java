@@ -18,15 +18,6 @@ import org.sg.campus.service.TopicService;
 import org.sg.campus.service.TopicServiceImpl;
 import org.sg.util.SGUtil;
 
-//main la classe si avvia e chiede un comando 
-//Benventuo nel xml-xsd-campus   CRUD
-//Cosa vorresti maneggiare? Premi "s" per studenti, "c" per courses oppure "t" per topics
-//Inserisci l'operazione da eseguire:  
-//n - new student
-//r - read student by id
-//ra - read all students
-//u - update student by id
-//d - delete student
 public class Main {
 	public static void main(String[] args) throws Exception {
 		StudentService studentService = new StudentServiceImpl();
@@ -40,9 +31,6 @@ public class Main {
 		System.out.println("Cosa vorresti maneggiare? Premi 's' per studenti, 'c' per corsi, 't' per topics oppure 'e' per uscire");
 		String inputLine = bufferReader.readLine();
 		while (true) {
-//			System.out.println("Inserisci l'operazione da eseguire: \nn - new element" + "\nr - read element by id"
-//					+ "\nra - read all elements" + "\nu - update element by id" + "\nd - delete element"
-//					+ "\ne - esc per uscire");
 			if (inputLine.equals("s")) {
 				inputLine = chooseOperationStudent(studentService, bufferReader);
 			} else if (inputLine.equals("c")) {
@@ -79,7 +67,7 @@ public class Main {
 				} else if (inputLine.equals("r")) {
 					topicService.get(id);
 				} else if (inputLine.equals("d")) {
-
+					topicService.delete(id);
 				} else if (inputLine.equals("u")) {
 					topicService.update(id, name, description, course);
 				} else if (inputLine.equals("ra")) {
@@ -116,7 +104,7 @@ public class Main {
 				} else if (inputLine.equals("r")) {
 					courseService.get(id);
 				} else if (inputLine.equals("d")) {
-
+					courseService.delete(id);
 				} else if (inputLine.equals("u")) {
 					courseService.update(id, name, description);
 				} else if (inputLine.equals("ra")) {
@@ -154,7 +142,7 @@ public class Main {
 				} else if (inputLine.equals("r")) {
 					studentService.get(id);
 				} else if (inputLine.equals("d")) {
-
+					studentService.delete(id);
 				} else if (inputLine.equals("u")) {
 					studentService.update(id, name, surname, jobTitle);
 				} else if (inputLine.equals("ra")) {

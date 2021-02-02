@@ -50,6 +50,14 @@ Dove:
 #### A cosa servono i file xml?
 In sintesi i file xml servono: to do.
 
+# Maneggiare file xml usando java
+
+#### DOMParser
+TODO due righe che cos' e domparser 
+
+#### Inizializzare e usare DOMParser
+parla del document getchildnodes etc.
+
 # Links
 
 * [XSD/XML w3schools](https://www.w3schools.com/xml/schema_schema.asp) - Come creare un `xsd schema` 

@@ -32,4 +32,9 @@ public class CourseServiceImpl implements CourseService {
 		throw new IllegalArgumentException("Metodo \"get\" non implementato usando il DOMParser\n");
 		
 	}
+
+	@Override
+	public void delete(String id) {
+		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");	
+	}
 }

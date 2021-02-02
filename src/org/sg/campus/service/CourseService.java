@@ -10,4 +10,5 @@ public interface CourseService {
 	void get(String string);
 	void create(String id, String name, String description);
 	void update(String id, String name, String description);
+	void delete(String id);
 }
