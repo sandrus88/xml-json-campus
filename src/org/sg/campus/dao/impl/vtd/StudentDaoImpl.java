@@ -90,7 +90,7 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
     }
     
     @Override
-    public Student get(String string) {
+    public Student get(int id) {
         AutoPilot autoPilot = new AutoPilot(vtdNav);
         autoPilot.selectElement("student");
         
@@ -98,12 +98,12 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
     }
     
     @Override
-    public void create(String id, String name, String surname, String jobTitle) {
+    public void create(int id, String name, String surname, String jobTitle) {
     
     }
     
     @Override
-    public void update(String id, String name, String surname, String jobTitle) {
+    public void update(int id, String name, String surname, String jobTitle) {
     
     }
 }

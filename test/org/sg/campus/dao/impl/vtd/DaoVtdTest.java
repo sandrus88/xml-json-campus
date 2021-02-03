@@ -22,7 +22,7 @@ public class DaoVtdTest {
     @Test
     public void test_get() throws Exception {
         StudentDao dao = new StudentDaoImpl("./xml/campus_list.xml");
-        Student student = dao.get("001");
+        Student student = dao.get(1);
         System.out.print(student);
         assertNotNull(student);
     }
