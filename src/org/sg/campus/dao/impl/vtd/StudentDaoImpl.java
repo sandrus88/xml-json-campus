@@ -1,8 +1,6 @@
 package org.sg.campus.dao.impl.vtd;
 
-import com.ximpleware.AutoPilot;
-import com.ximpleware.NavException;
-import com.ximpleware.VTDNav;
+import com.ximpleware.*;
 import org.sg.campus.dao.StudentDao;
 import org.sg.campus.model.Student;
 
@@ -29,58 +27,25 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
         autoPilot.selectElement("student");
         int currentIndex;
         while (autoPilot.iterate()) {  //each student
-            int id = -1;
-            String name = null;
-            String surname = null;
-            String jobTitle = null;
-            String paymentType = null;
+            Student student = new Student();
+            student.setId(getAttribute(vtdNav, "id"));
             
             currentIndex = vtdNav.getCurrentIndex();
-            String tagName = vtdNav.toString(vtdNav.getCurrentIndex());
-            System.out.println("in index: " + currentIndex + " found tag: " + tagName + ", going to read his children");
-            
-            if (vtdNav.toElement(VTDNav.FIRST_CHILD)) {
-                tagName = vtdNav.toString(vtdNav.getCurrentIndex());
-//              System.out.println("FIRST_CHILD found tag: " + tagName);
+            if (vtdNav.toElement(VTDNav.FIRST_CHILD)) { //first field of student
+                String tagName = vtdNav.toString(vtdNav.getCurrentIndex());
                 String val = getValue(vtdNav);
-//              System.out.println("val: " + val);
+//                System.out.println("tagName: " + tagName + ", val: " + val);
+                enrichStudent(student, tagName, val);
                 
-                if (tagName.equalsIgnoreCase("id")) {
-                    id = Integer.parseInt(val);
-                } else if (tagName.equals("name")) {
-                    name = val;
-                } else if (tagName.equals("surname")) {
-                    surname = val;
-                } else if (tagName.equals("jobTitle")) {
-                    jobTitle = val;
-                } else if (tagName.equals("paymentType")) {
-                    paymentType = val;
-                }
-
-                while (vtdNav.toElement(VTDNav.NEXT_SIBLING)) {  //each field of student
+                while (vtdNav.toElement(VTDNav.NEXT_SIBLING)) {  // the remaining fields of student
                     tagName = vtdNav.toString(vtdNav.getCurrentIndex());
-//                  System.out.println("NEXT_SIBLING found tag: " + tagName);
                     val = getValue(vtdNav);
-//                  System.out.println("val: " + val);
-    
-                    if (tagName.equalsIgnoreCase("id")) {
-                        id = Integer.parseInt(val);
-                    } else if (tagName.equals("name")) {
-                        name = val;
-                    } else if (tagName.equals("surname")) {
-                        surname = val;
-                    } else if (tagName.equals("jobTitle")) {
-                        jobTitle = val;
-                    } else if (tagName.equals("paymentType")) {
-                        paymentType = val;
-                    }
+//                  System.out.println("tagName: " + tagName + ", val: " + val);
+                    enrichStudent(student, tagName, val);
                 }
-    
-                Student student = new Student(id, name, surname, jobTitle, paymentType);
                 students.add(student);
             }
             vtdNav.recoverNode(currentIndex);
-            
         }
         return students;
     }
@@ -90,11 +55,56 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
     }
     
     @Override
-    public Student get(int id) {
+    public Student get(int id) throws XPathParseException, NavException, XPathEvalException {
         AutoPilot autoPilot = new AutoPilot(vtdNav);
-        autoPilot.selectElement("student");
+        String xPath = "//campus/students/student[@id='" + id + "']";
+        autoPilot.selectXPath(xPath);
+        Student student = null;
+        if (autoPilot.evalXPath() != -1) {
+//            String studentTagFound = vtdNav.toString(vtdNav.getCurrentIndex());
+//            String studentValueFound = getValue(vtdNav);
+//            System.out.println("studentTagFound: " + studentTagFound + ", studentValueFound: " + studentValueFound);
+            
+            student = new Student();
+            student.setId(getAttribute(vtdNav, "id"));
+            
+            if (vtdNav.toElement(VTDNav.FIRST_CHILD)) {  //first field of student
+                String tagName = vtdNav.toString(vtdNav.getCurrentIndex());
+                String val = getValue(vtdNav);
+//                System.out.println("tagName: " + tagName + ", val: " + val);
+                enrichStudent(student, tagName, val);
+    
+                while (vtdNav.toElement(VTDNav.NEXT_SIBLING)) {  // the remaining field of student
+                    tagName = vtdNav.toString(vtdNav.getCurrentIndex());
+                    val = getValue(vtdNav);
+//                  System.out.println("tagName: " + tagName + ", val: " + val);
+                    enrichStudent(student, tagName, val);
+                }
+            }
+        }
         
-        return null;
+        return student;
+    }
+    
+    private void enrichStudent(Student student, String tagName, String val) {
+        if (tagName.equals("name")) {
+            student.setName(val);
+        } else if (tagName.equals("surname")) {
+            student.setSurname(val);
+        } else if (tagName.equals("jobTitle")) {
+            student.setJobTitle(val);
+        } else if (tagName.equals("paymentType")) {
+            student.setPaymentType(val);
+        }
+    }
+    
+    public static int getAttribute(VTDNav vtdNav, String attrName) throws NavException {
+        int originAttrIndex = vtdNav.getAttrVal(attrName);
+        if (originAttrIndex == -1) {
+            throw new IllegalArgumentException("Attribute: " + attrName + " not present");
+        }
+        String attrVal = vtdNav.toString(originAttrIndex);
+        return Integer.parseInt(attrVal);
     }
     
     @Override

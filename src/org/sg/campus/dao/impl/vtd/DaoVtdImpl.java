@@ -17,7 +17,7 @@ public class DaoVtdImpl {
         vtdGen.parse(false);
         
         vtdNav = vtdGen.getNav();
-        System.out.println(getVtdNavAsString(vtdNav));
+//        System.out.println(getVtdNavAsString(vtdNav));
     }
     
     public DaoVtdImpl(String filePath) throws Exception {
