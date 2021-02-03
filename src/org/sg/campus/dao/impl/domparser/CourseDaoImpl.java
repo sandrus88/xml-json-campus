@@ -64,9 +64,4 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 	public void delete(int id) {
 		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");	
 	}
-	
-	public static void main(String[] args) throws Exception {
-		CourseDaoImpl courses = new CourseDaoImpl();
-		courses.getAll();
-	}
 }
