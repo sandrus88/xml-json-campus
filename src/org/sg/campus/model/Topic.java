@@ -7,6 +7,17 @@ public class Topic {
 	private String description;
 	private int course;
 
+	public Topic() {
+		
+	}
+	
+	public Topic(int id, String name, String description, int course) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.course = course;
+	}
+	
 	public void setId(int x) {
 		id = x;
 	}

@@ -24,10 +24,11 @@ public class TopicDaoImpl extends DOMParserDao implements TopicDao {
 			for (int j = 0; j < topicFieldsList.getLength(); j++) {
 				Node fieldElement = topicFieldsList.item(j);
 				if (fieldElement.getNodeType() == Node.ELEMENT_NODE) {
+					String attrId = fieldElement.getAttributes().getNamedItem("id").getNodeValue();
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
 					if (nodeName.equals("id")) {
-						dto.setId(Integer.parseInt(nodeContent));
+						dto.setId(Integer.parseInt(attrId));
 					} else if (nodeName.equals("name")) {
 						dto.setName(nodeContent);
 					} else if (nodeName.equals("description")) {

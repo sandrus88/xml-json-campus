@@ -6,7 +6,19 @@ public class Student {
 	private String name;
 	private String surname;
 	private String jobTitle;
-	private String paymentType;
+	private PaymentType paymentType;
+	
+	public Student() {
+		
+	}
+	
+	public Student(int id, String name, String surname, String jobTitle, PaymentType paymentType) {
+		this.id = id;
+		this.name = name;
+		this.surname = surname;
+		this.jobTitle = jobTitle;
+		this.paymentType = paymentType;
+	}
 	
 	public void setId(int x) {
 		id = x;
@@ -40,11 +52,11 @@ public class Student {
 		return jobTitle;
 	}
 
-	public void setPaymentType(String str) {
-		paymentType = str;
+	public void setPaymentType(PaymentType p) {
+		paymentType = p;
 	}
 
-	public String getPaymentType() {
+	public PaymentType getPaymentType() {
 		return paymentType;
 	}
 

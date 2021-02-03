@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sg.campus.dao.StudentDao;
+import org.sg.campus.model.PaymentType;
 import org.sg.campus.model.Student;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -21,13 +22,14 @@ public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 			Student dto = new Student();
 			Node studentNode = studentsList.item(i);
 			NodeList studentFieldsList = studentNode.getChildNodes();
-			for (int j = 0; j < studentFieldsList.getLength(); j++) {
+			for (int j = 1; j < studentFieldsList.getLength(); j++) {
 				Node fieldElement = studentFieldsList.item(j);
+				String attrId = fieldElement.getAttributes().getNamedItem("id").getTextContent();
 				if (fieldElement.getNodeType() == Node.ELEMENT_NODE) {
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
-					if (nodeName.equals("id")) {
-						dto.setId(Integer.parseInt(nodeContent));
+					if (nodeName.equalsIgnoreCase("id")) {
+						dto.setId(Integer.parseInt(attrId));
 					} else if (nodeName.equals("name")) {
 						dto.setName(nodeContent);
 					} else if (nodeName.equals("surname")) {
@@ -35,7 +37,7 @@ public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 					} else if (nodeName.equals("jobTitle")) {
 						dto.setJobTitle(nodeContent);
 					} else if (nodeName.equals("paymentType")) {
-						dto.setPaymentType(nodeContent);
+						dto.setPaymentType(PaymentType.valueOf(nodeContent));
 					}
 				}
 			}

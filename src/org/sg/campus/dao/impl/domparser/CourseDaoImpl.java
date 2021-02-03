@@ -25,10 +25,11 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 			for (int j = 0; j < courseFieldsList.getLength(); j++) {
 				Node fieldElement = courseFieldsList.item(j);
 				if (fieldElement.getNodeType() == Node.ELEMENT_NODE) {
+					String attrId = fieldElement.getAttributes().getNamedItem("id").getNodeValue();
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
 					if (nodeName.equals("id")) {
-						id = Integer.parseInt(nodeContent);
+						id = Integer.parseInt(attrId);
 					} else if (nodeName.equals("name")) {
 						name = nodeContent;
 					} else if (nodeName.equals("description")) {
