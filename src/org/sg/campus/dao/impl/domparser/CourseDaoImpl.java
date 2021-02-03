@@ -9,7 +9,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class CourseDaoImpl extends DOMParserDao implements CourseDao {
-
 	public CourseDaoImpl() throws Exception {
 		super();
 	}
@@ -18,8 +17,8 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 		List<Course> courses = new ArrayList<Course>();
 		NodeList coursesList = document.getElementsByTagName("course");
 		for (int i = 0; i < coursesList.getLength(); i++) {
-			int id = -1;
-			String name = null;
+			int id = 0;
+			String name = "";
 			String description = null;
 			Node courseNode = coursesList.item(i);
 			NodeList courseFieldsList = courseNode.getChildNodes();
@@ -37,7 +36,7 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 					}
 				}
 			}
-			if (id != -1) {
+			if (!name.equals("")) {
 				Course dto = new Course(id, name, description);
 				courses.add(dto);
 			}
