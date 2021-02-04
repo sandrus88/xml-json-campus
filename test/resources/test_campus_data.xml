@@ -1,0 +1,45 @@
+<campus xmlns="http://www.sg.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sg.com ../xsd/schema-online-campus.xsd">
+
+    <students>
+        <student id="101">
+            <name>Sandro</name>
+            <surname>Gargano</surname>
+            <jobTitle>Waiter</jobTitle>
+            <paymentType>NOTOK</paymentType>
+        </student>
+        <student id="102">
+            <name>Ermal</name>
+            <surname>Aliraj</surname>
+            <paymentType>OK</paymentType>
+        </student>
+	</students>
+    <courses>
+        <course id="201">
+            <name>Java fundamentals</name>
+        </course>
+        <course id="203">
+            <name>Operating Systems</name>
+            <description>This course will introduce you to modern operating systems. We will focus on UNIX-based
+                operating systems, though we will also learn about alternative operating systems, including Windows. The
+                course will begin with an overview of the structure of modern operating systems. Over the course of the
+                subsequent units, we will discuss the history of modern computers, analyze in detail each of the major
+                components of an operating system (from processes to threads), and explore more advanced topics in the
+                field, including memory management and file input/output. The class will conclude with a discussion of
+                various system-related security issues.
+            </description>
+        </course>
+    </courses>
+    <topics>
+        <topic id="301">
+            <name>Objects Oriented Paradigm</name>
+            <description>OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)</description>
+            <course>201</course>
+        </topic>
+        <topic id="302">
+            <name>Basic Java constructs like loops and data types</name>
+            <course>201</course>
+        </topic>
+    </topics>
+</campus>

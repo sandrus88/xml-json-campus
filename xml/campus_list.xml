@@ -1,142 +1,155 @@
 <campus xmlns="http://www.sg.com"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.sg.com ../xsd/schema-online-campus.xsd">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sg.com ../xsd/schema-online-campus.xsd">
 
-	<students>
-		<student id="101">
-			<name>Sandro</name>
-			<surname>Gargano</surname>
-			<jobTitle>Waiter</jobTitle>
-			<paymentType>NOTOK</paymentType>
-		</student>
-		<student id="102">
-			<name>Ermal</name>
-			<surname>Aliraj</surname>
-			<paymentType>OK</paymentType>
-		</student>
-		<student id="103">
-			<name>Armela</name>
-			<surname>Xhaxho</surname>
-			<paymentType>UNKNOWN</paymentType>
-		</student>
-		<student id="104">
-			<name>Aida</name>
-			<surname>Xhaxho</surname>
-			<paymentType>OK</paymentType>
-		</student>
-		<student id="105">
-			<name>Andrea</name>
-			<surname>Fumagalli</surname>
-			<jobTitle>Project Manager</jobTitle>
-			<paymentType>OK</paymentType>
-		</student>
-		<student id="106">
-			<name>Alessandro</name>
-			<surname>Eramo</surname>
-			<paymentType>UNKNOWN</paymentType>
-		</student>
-	</students>
-	<courses>
-		<course id="201">
-			<name>Java fundamentals</name>
-		</course>
-		<course id="202">
-			<name>Java advanced programming</name>
-		</course>
-		<course id="203">
-			<name>Operating Systems</name>
-			<description>This course will introduce you to modern operating systems. We will focus on UNIX-based operating systems, though we will also learn about alternative operating systems, including Windows. The course will begin with an overview of the structure of modern operating systems. Over the course of the subsequent units, we will discuss the history of modern computers, analyze in detail each of the major components of an operating system (from processes to threads), and explore more advanced topics in the field, including memory management and file input/output. The class will conclude with a discussion of various system-related security issues.</description>
-		</course>
-		<course id="204">
-			<name>Computer Network</name>
-		</course>
-		<course id="205">
-			<name>Data Structures and Algorithms</name>
-		</course>
-	</courses>
-	<topics>
-		<topic id="301">
-			<name>Objects Oriented Paradigm</name>
-			<description>OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)</description>
-			<course>201</course>
-		</topic>
-		<topic id="302">
-			<name>Basic Java constructs like loops and data types</name>
-			<course>201</course>
-		</topic>
-		<topic id="303">
-			<name>String handling</name>
-			<course>201</course>
-		</topic>
-		<topic id="304">
-			<name>Collection framework</name>
-			<description>List, ArrayList, LinkedList</description>
-			<course>201</course>
-		</topic>
-		<topic id="305">
-			<name>Exception handling</name>
-			<course>201</course>
-		</topic>
-		<topic id="306">
-			<name>Servlet</name>
-			<course>202</course>
-		</topic>
-		<topic id="307">
-			<name>JSP</name>
-			<course>202</course>
-		</topic>
-		<topic id="308">
-			<name>What is an Operating System?</name>
-			<course>203</course>
-		</topic>
-		<topic id="309">
-			<name>Operating System history</name>
-			<course>203</course>
-		</topic>
-		<topic id="310">
-			<name>Operating System concepts</name>
-			<description>CPU, file storage, input/output (I/O) devices, and network connections.</description>
-			<course>203</course>
-		</topic>
-		<topic id="311">
-			<name>Operating System structures</name>
-			<course>203</course>
-		</topic>
-		<topic id="312">
-			<name>Local Area Network (LAN) Technologies</name>
-			<course>204</course>
-		</topic>
-		<topic id="313">
-			<name>Introduction of MAC Address</name>
-			<course>204</course>
-		</topic>
-		<topic id="314">
-			<name>Multiple Access Protocols</name>
-			<course>204</course>
-		</topic>
-		<topic id="315">
-			<name>Ethernet Frame Format</name>
-			<course>204</course>
-		</topic>
-		<topic id="316">
-			<name>Basic Data Structures: Arrays, Strings, Stacks, Queues</name>
-			<course>205</course>
-		</topic>
-		<topic id="317">
-			<name>Basic math operations (addition, subtraction, multiplication, division, exponentiation)</name>
-			<course>205</course>
-		</topic>
-		<topic id="318">
-			<name>Euclid's GCD Algorithm</name>
-			<course>205</course>
-		</topic>
-		<topic id="319">
-			<name>Greedy Algorithms</name>
-			<course>205</course>
-		</topic>
-		<topic id="320">
-			<name>Binary Searching</name>
-			<course>205</course>
-		</topic>
-	</topics>
+    <students>
+        <student id="101">
+            <name>Sandro</name>
+            <surname>Gargano</surname>
+            <jobTitle>Waiter</jobTitle>
+            <paymentType>NOTOK</paymentType>
+        </student>
+        <student id="102">
+            <name>Ermal</name>
+            <surname>Aliraj</surname>
+            <paymentType>OK</paymentType>
+        </student>
+        <student id="103">
+            <name>Armela</name>
+            <surname>Xhaxho</surname>
+            <paymentType>UNKNOWN</paymentType>
+        </student>
+        <student id="104">
+            <name>Aida</name>
+            <surname>Xhaxho</surname>
+            <paymentType>OK</paymentType>
+        </student>
+        <student id="105">
+            <name>Andrea</name>
+            <surname>Fumagalli</surname>
+            <jobTitle>Project Manager</jobTitle>
+            <paymentType>OK</paymentType>
+        </student>
+        <student id="106">
+            <name>Alessandro</name>
+            <surname>Eramo</surname>
+            <paymentType>UNKNOWN</paymentType>
+        </student>
+        <student id='201'>
+            <name>ermal2</name>
+            <surname>aliraj2</surname>
+            <jobTitle>null</jobTitle>
+            <paymentType>UNKNOWN</paymentType>
+        </student>
+    </students>
+    <courses>
+        <course id="201">
+            <name>Java fundamentals</name>
+        </course>
+        <course id="202">
+            <name>Java advanced programming</name>
+        </course>
+        <course id="203">
+            <name>Operating Systems</name>
+            <description>This course will introduce you to modern operating systems. We will focus on UNIX-based
+                operating systems, though we will also learn about alternative operating systems, including Windows. The
+                course will begin with an overview of the structure of modern operating systems. Over the course of the
+                subsequent units, we will discuss the history of modern computers, analyze in detail each of the major
+                components of an operating system (from processes to threads), and explore more advanced topics in the
+                field, including memory management and file input/output. The class will conclude with a discussion of
+                various system-related security issues.
+            </description>
+        </course>
+        <course id="204">
+            <name>Computer Network</name>
+        </course>
+        <course id="205">
+            <name>Data Structures and Algorithms</name>
+        </course>
+    </courses>
+    <topics>
+        <topic id="301">
+            <name>Objects Oriented Paradigm</name>
+            <description>OOPS concepts (Data Abstraction, Encapsulation, Inheritance, Polymorphism)</description>
+            <course>201</course>
+        </topic>
+        <topic id="302">
+            <name>Basic Java constructs like loops and data types</name>
+            <course>201</course>
+        </topic>
+        <topic id="303">
+            <name>String handling</name>
+            <course>201</course>
+        </topic>
+        <topic id="304">
+            <name>Collection framework</name>
+            <description>List, ArrayList, LinkedList</description>
+            <course>201</course>
+        </topic>
+        <topic id="305">
+            <name>Exception handling</name>
+            <course>201</course>
+        </topic>
+        <topic id="306">
+            <name>Servlet</name>
+            <course>202</course>
+        </topic>
+        <topic id="307">
+            <name>JSP</name>
+            <course>202</course>
+        </topic>
+        <topic id="308">
+            <name>What is an Operating System?</name>
+            <course>203</course>
+        </topic>
+        <topic id="309">
+            <name>Operating System history</name>
+            <course>203</course>
+        </topic>
+        <topic id="310">
+            <name>Operating System concepts</name>
+            <description>CPU, file storage, input/output (I/O) devices, and network connections.</description>
+            <course>203</course>
+        </topic>
+        <topic id="311">
+            <name>Operating System structures</name>
+            <course>203</course>
+        </topic>
+        <topic id="312">
+            <name>Local Area Network (LAN) Technologies</name>
+            <course>204</course>
+        </topic>
+        <topic id="313">
+            <name>Introduction of MAC Address</name>
+            <course>204</course>
+        </topic>
+        <topic id="314">
+            <name>Multiple Access Protocols</name>
+            <course>204</course>
+        </topic>
+        <topic id="315">
+            <name>Ethernet Frame Format</name>
+            <course>204</course>
+        </topic>
+        <topic id="316">
+            <name>Basic Data Structures: Arrays, Strings, Stacks, Queues</name>
+            <course>205</course>
+        </topic>
+        <topic id="317">
+            <name>Basic math operations (addition, subtraction, multiplication, division, exponentiation)</name>
+            <course>205</course>
+        </topic>
+        <topic id="318">
+            <name>Euclid's GCD Algorithm</name>
+            <course>205</course>
+        </topic>
+        <topic id="319">
+            <name>Greedy Algorithms</name>
+            <course>205</course>
+        </topic>
+        <topic id="320">
+            <name>Binary Searching</name>
+            <course>205</course>
+        </topic>
+    </topics>
 </campus>
