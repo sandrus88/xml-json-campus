@@ -19,33 +19,27 @@ public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 		List<Student> students = new ArrayList<Student>();
 		NodeList studentsList = document.getElementsByTagName("student");
 		for (int i = 0; i < studentsList.getLength(); i++) {
-			int id = -1;
-			String name = "";
-			String surname = null;
-			String jobTitle = null;
-			PaymentType paymentType = PaymentType.UNKOWN;
 			Node studentNode = studentsList.item(i);
-			String attrId = studentNode.getAttributes().getNamedItem("id").getTextContent();
+			String s = studentNode.getAttributes().getNamedItem("id").getTextContent();
 			NodeList studentFieldsList = studentNode.getChildNodes();
+			Student dto = new Student();
 			for (int j = 0; j < studentFieldsList.getLength(); j++) {
 				Node fieldElement = studentFieldsList.item(j);
 				if (fieldElement.getNodeType() == Node.ELEMENT_NODE) {
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
-					if (nodeName.equalsIgnoreCase("id")) {
-						id = (Integer.parseInt(attrId));
-					} else if (nodeName.equals("name")) {
-						name = nodeContent;
+					dto.setId(Integer.parseInt(s));
+					if (nodeName.equals("name")) {
+						dto.setName(nodeContent);
 					} else if (nodeName.equals("surname")) {
-						surname = nodeContent;
+						dto.setSurname(nodeContent);
 					} else if (nodeName.equals("jobTitle")) {
-						jobTitle = nodeContent;
+						dto.setJobTitle(nodeContent);
 					} else if (nodeName.equals("paymentType")) {
-						paymentType = PaymentType.valueOf(nodeContent);
+						dto.setPaymentType(PaymentType.valueOf(nodeContent));
 					}
 				}
 			}
-			Student dto = new Student();
 			students.add(dto);
 		}
 		return students;
