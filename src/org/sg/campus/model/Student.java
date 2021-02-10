@@ -6,14 +6,6 @@ public class Student {
 	private String name;
 	private String surname;
 	private String jobTitle;
-<<<<<<< HEAD
-	private String paymentType;
-    
-    public Student() {
-    }
-    
-	public Student(int id, String name, String surname, String jobTitle, String paymentType) {
-=======
 	private PaymentType paymentType;
 	
 	public Student() {
@@ -21,7 +13,6 @@ public class Student {
 	}
 	
 	public Student(int id, String name, String surname, String jobTitle, PaymentType paymentType) {
->>>>>>> handle_data_domparser
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
