@@ -17,26 +17,26 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 		List<Course> courses = new ArrayList<Course>();
 		NodeList coursesList = document.getElementsByTagName("course");
 		for (int i = 0; i < coursesList.getLength(); i++) {
-			int id = 0;
+			int id = 1;
 			String name = "";
 			String description = null;
 			Node courseNode = coursesList.item(i);
+			String s = courseNode.getAttributes().getNamedItem("id").getTextContent();
 			NodeList courseFieldsList = courseNode.getChildNodes();
 			for (int j = 0; j < courseFieldsList.getLength(); j++) {
 				Node fieldElement = courseFieldsList.item(j);
 				if (fieldElement.getNodeType() == Node.ELEMENT_NODE) {
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
-					if (nodeName.equals("id")) {
-						id = Integer.parseInt(nodeContent);
-					} else if (nodeName.equals("name")) {
+					id = Integer.parseInt(s);
+					if (nodeName.equals("name")) {
 						name = nodeContent;
 					} else if (nodeName.equals("description")) {
-						description = nodeContent;
+						description = (nodeContent);
 					}
 				}
 			}
-			if (!name.equals("")) {
+			if (!name.equals(null)) {
 				Course dto = new Course(id, name, description);
 				courses.add(dto);
 			}
@@ -60,8 +60,8 @@ public class CourseDaoImpl extends DOMParserDao implements CourseDao {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 
 	}
-	
+
 	public void delete(int id) {
-		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");	
+		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");
 	}
 }

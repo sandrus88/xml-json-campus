@@ -18,17 +18,17 @@ public class TopicDaoImpl extends DOMParserDao implements TopicDao {
 		List<Topic> topics = new ArrayList<Topic>();
 		NodeList topicsList = document.getElementsByTagName("topic");
 		for (int i = 0; i < topicsList.getLength(); i++) {
-			Topic dto = new Topic();
 			Node topicNode = topicsList.item(i);
+			String s = topicNode.getAttributes().getNamedItem("id").getTextContent();
 			NodeList topicFieldsList = topicNode.getChildNodes();
+			Topic dto = new Topic();
 			for (int j = 0; j < topicFieldsList.getLength(); j++) {
 				Node fieldElement = topicFieldsList.item(j);
 				if (fieldElement.getNodeType() == Node.ELEMENT_NODE) {
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
-					if (nodeName.equals("id")) {
-						dto.setId(Integer.parseInt(nodeContent));
-					} else if (nodeName.equals("name")) {
+					dto.setId(Integer.parseInt(s));
+					if (nodeName.equals("name")) {
 						dto.setName(nodeContent);
 					} else if (nodeName.equals("description")) {
 						dto.setDescription(nodeContent);
@@ -50,7 +50,7 @@ public class TopicDaoImpl extends DOMParserDao implements TopicDao {
 
 	@Override
 	public void create(int id, String name, String description, int course) {
-		
+
 //		document.createElement("topic");
 		throw new IllegalArgumentException("Metodo \"create\" non implementato usando il DOMParser\n");
 	}
@@ -59,8 +59,8 @@ public class TopicDaoImpl extends DOMParserDao implements TopicDao {
 	public void update(int id, String name, String description, int course) {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 	}
-	
+
 	public void delete(int id) {
-		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");	
+		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");
 	}
 }
