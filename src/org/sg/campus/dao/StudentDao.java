@@ -1,9 +1,7 @@
 package org.sg.campus.dao;
 
-import java.io.IOException;
 import java.util.List;
 
-import com.ximpleware.*;
 import org.sg.campus.model.Student;
 
 public interface StudentDao {

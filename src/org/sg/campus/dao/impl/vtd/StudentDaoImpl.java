@@ -1,10 +1,5 @@
 package org.sg.campus.dao.impl.vtd;
 
-import com.ximpleware.*;
-import org.sg.campus.dao.StudentDao;
-import org.sg.campus.model.PaymentType;
-import org.sg.campus.model.Student;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,7 +7,16 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
+import org.sg.campus.dao.StudentDao;
+import org.sg.campus.model.PaymentType;
+import org.sg.campus.model.Student;
+
+import com.ximpleware.AutoPilot;
+import com.ximpleware.ModifyException;
+import com.ximpleware.NavException;
+import com.ximpleware.TranscodeException;
+import com.ximpleware.VTDNav;
+import com.ximpleware.XMLModifier;
 
 public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
 
@@ -97,7 +101,7 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
         } else if (tagName.equals("jobTitle")) {
             student.setJobTitle(val);
         } else if (tagName.equals("paymentType")) {
-            student.setPaymentType(val);
+            student.setPaymentType(PaymentType.valueOf(val));
         }
     }
     
