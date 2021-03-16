@@ -9,6 +9,8 @@ import org.sg.campus.model.Student;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import static org.sg.util.StudentBuilder.enrichStudent;
+
 public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 
 	public StudentDaoImpl() throws Exception {
@@ -29,15 +31,7 @@ public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 					String nodeName = fieldElement.getNodeName();
 					String nodeContent = fieldElement.getTextContent();
 					dto.setId(Integer.parseInt(s));
-					if (nodeName.equals("name")) {
-						dto.setName(nodeContent);
-					} else if (nodeName.equals("surname")) {
-						dto.setSurname(nodeContent);
-					} else if (nodeName.equals("jobTitle")) {
-						dto.setJobTitle(nodeContent);
-					} else if (nodeName.equals("paymentType")) {
-						dto.setPaymentType(PaymentType.valueOf(nodeContent));
-					}
+					enrichStudent(dto, nodeName, nodeContent);
 				}
 			}
 			students.add(dto);

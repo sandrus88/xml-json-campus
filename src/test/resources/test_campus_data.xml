@@ -14,7 +14,6 @@
             <surname>Aliraj</surname>
             <paymentType>OK</paymentType>
         </student>
-		<student id='10001'><name>ermal2</name><surname>aliraj2</surname><jobTitle>null</jobTitle><paymentType>UNKNOWN</paymentType></student>
 	</students>
     <courses>
         <course id="201">
