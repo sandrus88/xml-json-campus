@@ -46,13 +46,13 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
             if (vtdNav.toElement(VTDNav.FIRST_CHILD)) { //first field of student
                 String tagName = vtdNav.toString(vtdNav.getCurrentIndex());
                 String val = getValue(vtdNav);
-                System.out.println("tagName: " + tagName + ", val: " + val);
+//                System.out.println("tagName: " + tagName + ", val: " + val);
                 enrichStudent(student, tagName, val);
                 
                 while (vtdNav.toElement(VTDNav.NEXT_SIBLING)) {  // the remaining fields of student
                     tagName = vtdNav.toString(vtdNav.getCurrentIndex());
                     val = getValue(vtdNav);
-                    System.out.println("tagName: " + tagName + ", val: " + val);
+//                    System.out.println("tagName: " + tagName + ", val: " + val);
                     enrichStudent(student, tagName, val);
                 }
                 students.add(student);
@@ -113,14 +113,15 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
     
     @Override
     public void create(int id, String name, String surname, String jobTitle) throws Exception {
-        String newStundentTemplate = getNewStudentTemplate(id, name, surname, jobTitle);
+        String newStudentTemplate = getNewStudentTemplate(id, name, surname, jobTitle);
+
         VTDNav vtdNav = setupVTDNav();
         AutoPilot autoPilot = new AutoPilot(vtdNav);
         autoPilot.selectElement("students");
         if (autoPilot.iterate()) {
             XMLModifier xmlModifier = new XMLModifier();
             xmlModifier.bind(vtdNav);
-            xmlModifier.insertBeforeTail(newStundentTemplate);
+            xmlModifier.insertBeforeTail(newStudentTemplate);
             byte[] newXmlContent = toByteArray(xmlModifier);
             Files.write(Paths.get(filePath), newXmlContent);
         }

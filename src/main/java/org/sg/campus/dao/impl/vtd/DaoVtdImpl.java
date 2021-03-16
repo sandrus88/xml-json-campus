@@ -7,6 +7,8 @@ import com.ximpleware.VTDNav;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class DaoVtdImpl {
@@ -24,14 +26,19 @@ public class DaoVtdImpl {
     }
     
     protected VTDNav setupVTDNav() throws ParseException, IOException {
-        byte[] byteContent = Files.readAllBytes(Paths.get(filePath));
-        VTDGen vtdGen = new VTDGen();
-        vtdGen.setDoc(byteContent);
-        vtdGen.parse(false);
-        return vtdGen.getNav();
+        Path path = null;
+        try {
+            path = Paths.get(filePath);
+            byte[] byteContent = Files.readAllBytes(path);
+            VTDGen vtdGen = new VTDGen();
+            vtdGen.setDoc(byteContent);
+            vtdGen.parse(false);
+            return vtdGen.getNav();
+        } catch (NoSuchFileException e) {
+            throw new IllegalStateException("No file present in filePath: " + filePath + "; absolute path: " + path.toAbsolutePath());
+        }
     }
-    
-    
+
     protected String getVtdNavAsString(VTDNav vtdNav) throws NavException {
         return vtdNav.toString((int) vtdNav.getElementFragment(), (int) (vtdNav.getElementFragment() >> 32));
     }
