@@ -9,7 +9,10 @@ public class Student {
 	private PaymentType paymentType;
 	
 	public Student() {
-		
+	}
+	
+	public Student(int id) {
+		this.id = id;
 	}
 	
 	public Student(int id, String name, String surname, String jobTitle, PaymentType paymentType) {

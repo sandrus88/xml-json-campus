@@ -12,7 +12,7 @@ import java.util.List;
 
 import static org.sg.util.StudentBuilder.enrichStudent;
 
-public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
+public class StudentDaoImpl extends VtdDaoImpl implements StudentDao {
 
     public StudentDaoImpl(String filePath) throws Exception {
         super(filePath);
@@ -107,5 +107,10 @@ public class StudentDaoImpl extends DaoVtdImpl implements StudentDao {
     @Override
     public void update(int id, String name, String surname, String jobTitle) {
 
+    }
+    
+    @Override
+    public int count() throws Exception {
+        return 0;
     }
 }

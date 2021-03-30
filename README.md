@@ -48,7 +48,7 @@ Dove:
 * `xsi:schemaLocation="http://www.sg.com schema-online-campus.xsd"` - definisce dove si trova lo schema da usare: la parte prima della stringa indica il namespace "http://www.sg.com", mentre l'altra parte indica il percorso dello schema xsd dove e' stato definito questo namespace.
 
 #### A cosa servono i file xml?
-XML è un meta-linguaggio per definire la struttura di documenti e dati. Un documento XML è un file di testo che contiene una serie di tag, attributi e testo secondo regole sintattiche ben definite nel suo XML Schema (xsd).
+XML ï¿½ un meta-linguaggio per definire la struttura di documenti e dati. Un documento XML ï¿½ un file di testo che contiene una serie di tag, attributi e testo secondo regole sintattiche ben definite nel suo XML Schema (xsd).
 
 # Maneggiare file xml usando java
 
@@ -68,3 +68,10 @@ Il parsing e' un processo che analizza un flusso di dati in input ( da file o da
 * [Xml Esempio Wikipedia](https://it.wikipedia.org/wiki/XML_Schema#Esempio) - Significato di Xml ed esempio di sua creazione
 * [Creazione di xml tramite Eclipse](http://www.w3big.com/it/eclipse/eclipse-create-xml-file.html) - Creazione di un file xml tramite IDE Eclipse
 * [Validazione XSD/XML schema online](https://www.freeformatter.com/xml-validator-xsd.html) - Online validator per testare la correttezza di un file xsd e xml
+
+* [java-sax-parser](https://www.baeldung.com/java-sax-parser)
+
+https://stackoverflow.com/questions/7215931/reading-huge-xml-file-using-stax-and-xpath
+https://stackoverflow.com/questions/1863250/is-there-any-xpath-processor-for-sax-model
+https://github.com/pprados/xpath4sax
+http://andreas.haufler.info/2012/01/conveniently-processing-large-xml-files.html

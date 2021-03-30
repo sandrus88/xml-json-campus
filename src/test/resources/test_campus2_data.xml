@@ -1,0 +1,18 @@
+<campus xmlns="http://www.sg.com"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sg.com ../xsd/schema-online-campus.xsd">
+
+    <students>
+        <student id="101">
+            <name>Sandro</name>
+            <surname>Gargano</surname>
+            <jobTitle>Waiter</jobTitle>
+            <paymentType>NOTOK</paymentType>
+        </student>
+        <student id="102">
+            <name>Ermal</name>
+            <surname>Aliraj</surname>
+            <paymentType>OK</paymentType>
+        </student>
+	</students>
+</campus>

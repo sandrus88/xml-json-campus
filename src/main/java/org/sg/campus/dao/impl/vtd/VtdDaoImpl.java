@@ -9,18 +9,18 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class DaoVtdImpl {
+public class VtdDaoImpl {
 
     protected VTDNav vtdNav; // index navigator inside xml
     protected Path filePath; // path to physical file
     protected byte[] byteContent; // xml bytes. Letting as instance variable for development putpose
 
-//    public DaoVtdImpl(byte[] byteContent) throws Exception {
+//    public VtdDaoImpl(byte[] byteContent) throws Exception {
 //        this.byteContent = byteContent;
 //        vtdNav = setupVTDNav(byteContent);
 //    }
 
-    public DaoVtdImpl(String filePathString) throws Exception {
+    public VtdDaoImpl(String filePathString) throws Exception {
         try {
             filePath = Paths.get(filePathString);
             byteContent = Files.readAllBytes(filePath);

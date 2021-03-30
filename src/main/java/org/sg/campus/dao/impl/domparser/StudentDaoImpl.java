@@ -56,7 +56,12 @@ public class StudentDaoImpl extends DOMParserDao implements StudentDao {
 		throw new IllegalArgumentException("Metodo \"update\" non implementato usando il DOMParser\n");
 
 	}
-
+	
+	@Override
+	public int count() throws Exception {
+		return 0;
+	}
+	
 	public void delete(int id) {
 		throw new IllegalArgumentException("Metodo \"delete\" non implementato usando il DOMParser\n");
 	}
